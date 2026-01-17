@@ -1,7 +1,8 @@
-Lab 1: Familiarization with MySQL
+Lab 1: 
+Topic:Familiarization with MySQL
 Student: Avishek Gupta
-Roll No: 065
-Date: [Enter Date]
+Roll No: PUR080BCT020
+Date: 2082-10-3
 
 --------------------------------------------
 1. Objectives
@@ -15,6 +16,7 @@ Date: [Enter Date]
 --------------------------------------------
 2. Database and Tables Created
 --------------------------------------------
+
 Database: IOE_065
 
 Tables:
