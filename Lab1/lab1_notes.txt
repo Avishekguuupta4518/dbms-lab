@@ -1,0 +1,86 @@
+Lab 1: Familiarization with MySQL
+Student: Avishek Gupta
+Roll No: 065
+Date: [Enter Date]
+
+--------------------------------------------
+1. Objectives
+--------------------------------------------
+- Learn how to access PhpMyAdmin frontend for MySQL
+- Create a database and tables
+- Insert data into tables
+- Practice basic SQL queries (SELECT, WHERE, JOIN, etc.)
+- Understand relationships between tables (ER diagram)
+
+--------------------------------------------
+2. Database and Tables Created
+--------------------------------------------
+Database: IOE_065
+
+Tables:
+1. Course
+   - Columns: Course_id, Code, Name, Preq_course_id, Instructor_id
+
+2. Student
+   - Columns: Roll_no, Name, Address, Batch, Dept_no
+
+3. Department
+   - Columns: Dept_no, Name, Phone
+
+4. Instructor
+   - Columns: ID, Name, Dept_no, Salary, Email
+
+--------------------------------------------
+3. Data Inserted
+--------------------------------------------
+Department Table: 5 records
+Student Table: 5 records
+Instructor Table: 5 records
+Course Table: 5 records
+
+[Optional: List sample data here if required]
+
+--------------------------------------------
+4. SQL Queries Executed
+--------------------------------------------
+1. List all students:
+   SELECT Roll_no, Name FROM Student;
+
+2. Students from batch 065:
+   SELECT Roll_no, Name FROM Student WHERE Batch = '065';
+
+3. Instructors with salary > 20000:
+   SELECT * FROM Instructor WHERE Salary > 20000;
+
+4. Course & Instructor mapping:
+   SELECT Code, c.Name AS Course_Name, i.Name AS Instructor_Name
+   FROM Course AS c, Instructor AS i
+   WHERE c.Instructor_id = i.ID;
+
+5. Other queries tried:
+   - List all students from Computer department
+   - Find average salary of instructors
+   - List courses with prerequisite courses
+
+--------------------------------------------
+5. Observations / Notes
+--------------------------------------------
+- PhpMyAdmin is a friendly GUI for MySQL.
+- Foreign keys link courses to instructors and students to departments.
+- Using aliases (AS) makes query results more readable.
+- Errors encountered: [Write any errors you faced, e.g., typo in table name, port 80 issue]
+- Interesting findings: [Optional: e.g., students from batch 065 are mostly from Computer dept]
+
+--------------------------------------------
+6. Challenges / Solutions
+--------------------------------------------
+- Port 80 in use blocked XAMPP → solution: change Apache port to 8080
+- Forgot to enable AUTO_INCREMENT → corrected in table definition
+- [Add any other issues you faced and how you resolved them]
+
+--------------------------------------------
+7. Next Steps / To Try
+--------------------------------------------
+- Learn more SQL queries: JOIN, GROUP BY, ORDER BY
+- Explore exporting/importing databases
+- Draw ER diagram to understand relationships visually
