@@ -1,0 +1,146 @@
+Classic Models Database
+DBMS Lab – Explanation of SELECT Queries
+--------------------------------------------------
+
+This document explains the purpose and functionality of each SQL query
+used on the Classic Models sample database. The database represents a
+business that sells scale model cars and includes customers, employees,
+orders, products, and payments.
+
+--------------------------------------------------
+Query 1
+--------------------------------------------------
+This query retrieves all columns and all rows from the employees table.
+It is used to view complete employee information including personal
+details, job titles, office codes, and reporting structure.
+
+--------------------------------------------------
+Query 2
+--------------------------------------------------
+This query selects only the last name, first name, and job title from
+the employees table. It is used to display basic employee identification
+along with their designation without unnecessary data.
+
+--------------------------------------------------
+Query 3
+--------------------------------------------------
+This query retrieves the first name, last name, and email address of
+employees whose job title is "President". It helps identify top-level
+management and their contact information.
+
+--------------------------------------------------
+Query 4
+--------------------------------------------------
+This query displays a list of distinct job titles from the employees
+table. Duplicate job titles are removed, making it useful to understand
+the different roles present in the organization.
+
+--------------------------------------------------
+Query 5
+--------------------------------------------------
+This query retrieves employee names and job titles and sorts the results
+by first name in ascending order and job title in descending order.
+It demonstrates how multiple sorting conditions can be applied.
+
+--------------------------------------------------
+Query 6
+--------------------------------------------------
+This query selects unique city and state combinations from the customers
+table. It helps identify different customer locations without repetition.
+
+--------------------------------------------------
+Query 7
+--------------------------------------------------
+This query retrieves only the first five employee records. It is useful
+for previewing data and testing queries without loading the entire table.
+
+--------------------------------------------------
+Query 8
+--------------------------------------------------
+This query skips the first ten records and retrieves the next five.
+It demonstrates pagination, which is commonly used in web applications
+to display data page by page.
+
+--------------------------------------------------
+Query 9
+--------------------------------------------------
+This query retrieves office code, city, and phone number for offices
+located in either the USA or France. It demonstrates filtering using
+the IN clause.
+
+--------------------------------------------------
+Query 10
+--------------------------------------------------
+This query is identical to Query 9 and performs the same operation.
+It reinforces understanding of the IN condition.
+
+--------------------------------------------------
+Query 11
+--------------------------------------------------
+This query groups order details by order number and calculates the total
+order value by multiplying quantity ordered with price per item.
+Only orders with a total value greater than 60,000 are displayed.
+It demonstrates GROUP BY and HAVING clauses.
+
+--------------------------------------------------
+Query 12
+--------------------------------------------------
+This query retrieves detailed order information such as order number,
+customer number, status, and shipped date for high-value orders.
+It uses a subquery to filter orders whose total value exceeds 60,000.
+
+--------------------------------------------------
+Query 13
+--------------------------------------------------
+This query retrieves employees whose first name starts with the letter
+'A'. It uses the LIKE operator for pattern matching.
+
+--------------------------------------------------
+Query 14
+--------------------------------------------------
+This query retrieves employees whose last name ends with 'on'.
+It demonstrates suffix-based pattern matching using LIKE.
+
+--------------------------------------------------
+Query 15
+--------------------------------------------------
+This query retrieves employees whose last name does not start with 'B'.
+It demonstrates the use of NOT LIKE for exclusion conditions.
+
+--------------------------------------------------
+Query 16
+--------------------------------------------------
+This query combines customer numbers with contact last names and employee
+numbers with first names into a single result set using UNION.
+Duplicates are automatically removed.
+
+--------------------------------------------------
+Query 17
+--------------------------------------------------
+This query performs the same UNION operation as Query 16 but sorts the
+final combined result by name and ID. It demonstrates ordering results
+after a UNION operation.
+
+--------------------------------------------------
+Query 18
+--------------------------------------------------
+This query combines customer and employee data without aliases and
+orders the output by contact last name and customer number.
+It demonstrates column-based ordering in UNION queries.
+
+--------------------------------------------------
+Query 19
+--------------------------------------------------
+This query uses an INNER JOIN between products and order details tables.
+It displays which products are included in which orders.
+Only matching records from both tables are shown.
+
+--------------------------------------------------
+Query 20
+--------------------------------------------------
+This query uses a LEFT JOIN between customers and orders.
+It displays all customers, including those who have not placed any
+orders. For customers without orders, order-related fields are NULL.
+
+--------------------------------------------------
+End of Document

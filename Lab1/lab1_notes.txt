@@ -86,3 +86,54 @@ Course Table: 5 records
 - Learn more SQL queries: JOIN, GROUP BY, ORDER BY
 - Explore exporting/importing databases
 - Draw ER diagram to understand relationships visually
+
+
+## 3. Database and Tables
+
+**Database:** `IOE_065`  
+
+**Tables:**
+
+### **Student**
+| Column  | Type       | Key |
+|---------|------------|-----|
+| Roll_no | INT        | PK  |
+| Name    | VARCHAR(50)|     |
+| Address | VARCHAR(100)|    |
+| Batch   | VARCHAR(10)|     |
+| Dept_no | INT        | FK  |
+
+### **Department**
+| Column | Type       | Key |
+|--------|------------|-----|
+| Dept_no| INT        | PK  |
+| Name   | VARCHAR(50)|     |
+| Phone  | VARCHAR(15)|     |
+
+### **Instructor**
+| Column | Type         | Key |
+|--------|--------------|-----|
+| ID     | INT          | PK  |
+| Name   | VARCHAR(50)  |     |
+| Dept_no| INT          | FK  |
+| Salary | DECIMAL(10,2)|     |
+| Email  | VARCHAR(50)  |     |
+
+### **Course**
+| Column          | Type       | Key |
+|-----------------|------------|-----|
+| Course_id       | INT        | PK  |
+| Code            | VARCHAR(10)|     |
+| Name            | VARCHAR(50)|     |
+| Preq_course_id  | INT        | FK  |
+| Instructor_id   | INT        | FK  |
+
+
+## 2. Folder Structure
+
+DBMS LAB
+│
+├── Lab1
+│ ├── ioe_your_roll_no.sql # SQL script: tables, data, and sample queries
+│ ├── lab1_notes.txt # Observations, queries, errors
+└── README.md # This all-in-one file
